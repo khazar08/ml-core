@@ -1,5 +1,5 @@
 # ML-CORE
-Implementing all core machine learning models for revision purposes 
+Implementing all core machine learning algorithms for revision purposes 
   1. Logistic Regression:
 This project trains a model to classify breast tumors as malignant or benign from cell-measurement data.
   2. Decision Tree:
