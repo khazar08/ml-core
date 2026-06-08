@@ -3,7 +3,7 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import root_mean_squared_error, r2_score
 
-df = pd.read_csv("/Users/khazar/Downloads/garments_worker_productivity.csv")
+df = pd.read_csv("garments_worker_productivity.csv")
 
 # wip (work in progress) is NaN mainly for the finishing department,
 df["wip"] = df["wip"].fillna(0)
