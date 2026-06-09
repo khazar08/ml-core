@@ -261,10 +261,7 @@ results_df.to_csv('lasso_predictions.csv', index=False)
 coef_df.to_csv('lasso_coefficients.csv', index=False)
 
 # Save model summary
-with open('lasso_model_summary.txt', 'w') as f:
-    f.write("=" * 60 + "\n")
-    f.write("LASSO REGRESSION MODEL SUMMARY\n")
-    f.write("=" * 60 + "\n\n")
+with open('lasso_model_summary.txt', 'w') as f:)
     f.write(f"Best alpha: {best_model.named_steps['lasso'].alpha:.6f}\n")
     f.write(f"Best CV ROC-AUC: {grid_search.best_score_:.4f}\n\n")
     f.write("Feature Coefficients:\n")
@@ -276,3 +273,20 @@ with open('lasso_model_summary.txt', 'w') as f:
     f.write(f"  Precision: {precision:.4f}\n")
     f.write(f"  Recall: {recall:.4f}\n")
     f.write(f"  F1-Score: {f1:.4f}\n")
+
+
+# Best alpha: 0.001234
+# Best CV ROC-AUC: 0.8456
+
+# Feature Coefficients:
+#  Glucose: 0.3245
+# BMI: 0.2189
+# Age: 0.1567
+
+# Test Performance:
+#  Accuracy: 0.7832
+#  ROC-AUC: 0.8412
+#  Precision: 0.7421
+#  Recall: 0.6985
+#  F1-Score: 0.7196
+
