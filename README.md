@@ -6,3 +6,5 @@ This project trains a model to classify breast tumors as malignant or benign fro
  This project trains a model to predict how productive garment factory teams will be, and then shows which factors drive that prediction.
   3. KNN:
   This project uses KNN machine learning algorithm to classify breast tumors as benign or malignant based on measurements extracted from cell nuclei. (similar to logistic_regression.py)
+  4. Elastic Net Regression:
+     This project uses Elastic Net Regression to predict house prices from property characteristics while reducing overfitting and selecting the most     useful features through combined L1 and L2 regularization.
