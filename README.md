@@ -4,3 +4,5 @@ Implementing all core machine learning algorithms for revision purposes
 This project trains a model to classify breast tumors as malignant or benign from cell-measurement data.
   2. Decision Tree:
  This project trains a model to predict how productive garment factory teams will be, and then shows which factors drive that prediction.
+  3. KNN:
+  This project uses KNN machine learning algorithm to classify breast tumors as benign or malignant based on measurements extracted from cell nuclei. (similar to logistic_regression.py)
