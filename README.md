@@ -11,5 +11,7 @@ This project trains a model to classify breast tumors as malignant or benign fro
   5. Bayesian Regression:
      This project leverages Bayesian regression to model insurance costs, providing a way to identify key drivers while offering reliable predictions for future medical expenses.
 6. Lasso Regression: This project uses Lasso Regression to predict diabetes from medical features, including data preprocessing, exploratory analysis, hyperparameter tuning, feature selection, model evaluation (accuracy, ROC-AUC, confusion matrix). For model comparison practices, I also created visualizations comparing Lasso to standard Logistic Regression.
-
-
+7. Quadratic Discriminant Analysis:
+ QDA for classification on Wine dataset  using different covariance matrices per class to create quadratic decision boundaries.
+8. Support Vector Regression:
+   SVM for predicting continuous values on Diabetes dataset , Energy Efficiency dataset, and Concrete Strength dataset using kernel tricks to handle non-linear relationships with epsilon-insensitive loss.
