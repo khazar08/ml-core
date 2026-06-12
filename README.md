@@ -15,3 +15,4 @@ Implementing core machine learning algorithms for revision purposes
 7. **Quadratic Discriminant Analysis:** QDA for classification on Wine dataset using different covariance matrices per class to create quadratic decision boundaries.
 
 8. **Support Vector Regression:** SVM for predicting continuous values on Diabetes dataset, Energy Efficiency dataset, and Concrete Strength dataset using kernel tricks to handle non-linear relationships with epsilon-insensitive loss.
+9. **AdaBoost:** This project is an AdaBoost-based Customer Churn Prediction system that analyzes telecom customer data to identify customers likely to leave the service, enabling proactive retention strategies.
