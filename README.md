@@ -1,6 +1,6 @@
 Implementing core machine learning algorithms for revision purposes
 
-Supervised Learning:
+**Supervised Learning**:
 
   1. **Logistic Regression:** This project trains a model to classify breast tumors as malignant or benign from cell-measurement data.
   
