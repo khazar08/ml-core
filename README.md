@@ -20,6 +20,6 @@ Implementing core machine learning algorithms for revision purposes
   9. **AdaBoost:** This project is an AdaBoost-based Customer Churn Prediction system that analyzes telecom customer data to identify customers likely to leave the service, enabling proactive retention strategies.
   10. **Lasso Regression**: A complete machine learning pipeline using L1 regularization to predict diabetes from medical features with automatic feature selection, hyperparameter tuning, and performance evaluation comparing Lasso to standard Logistic Regression.
 
-Unsupervised Learning
+**Unsupervised Learning**
 
 1. **Affinity Propagation**: This project segments customers into distinct personas by identifying representative "exemplar" individuals within the data, allowing for targeted marketing strategies based on observed spending habits and income levels.
