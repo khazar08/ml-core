@@ -18,3 +18,4 @@ Implementing core machine learning algorithms for revision purposes
   
   8. **Support Vector Regression:** SVM for predicting continuous values on Diabetes dataset, Energy Efficiency dataset, and Concrete Strength dataset using kernel tricks to handle non-linear relationships with epsilon-insensitive loss.
   9. **AdaBoost:** This project is an AdaBoost-based Customer Churn Prediction system that analyzes telecom customer data to identify customers likely to leave the service, enabling proactive retention strategies.
+  10. **Lasso Regression **: A complete machine learning pipeline using L1 regularization to predict diabetes from medical features with automatic feature selection, hyperparameter tuning, and performance evaluation comparing Lasso to standard Logistic Regression.
