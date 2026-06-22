@@ -23,3 +23,4 @@ Implementing core machine learning algorithms for revision purposes
 **Unsupervised Learning**
 
 1. **Affinity Propagation**: This project segments customers into distinct personas by identifying representative "exemplar" individuals within the data, allowing for targeted marketing strategies based on observed spending habits and income levels.
+2. **Balanced Iterative Reducing and Clustering using Hierarchies**: This project implements and evaluates the BIRCH algorithm on the Wine dataset to perform unsupervised clustering, utilizing PCA for visualization and metric-based analysis to compare clustering performance against true target classes.
