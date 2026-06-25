@@ -36,3 +36,5 @@ Implementing core machine learning algorithms for revision purposes
 6. **Mean Shift**: This project applies the Mean Shift clustering algorithm to the Mall Customers dataset to automatically discover customer segments based on annual income and spending behavior for targeted marketing analysis.
     
 7. **Factor Analysis**: This project used Factor Analysis to the Big Five Personality Dataset to uncover latent personality traits and validate the five-factor psychological model through dimensionality reduction and factor extraction.
+
+8. **Uniform Manifold Approximation and Projection**: Applied UMAP dimensionality reduction to the Iris dataset to transform four-dimensional flower measurements into a two-dimensional embedding that reveals natural species clusters and relationships.
