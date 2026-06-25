@@ -24,9 +24,15 @@ Implementing core machine learning algorithms for revision purposes
 **Unsupervised Learning**
 
 1. **Affinity Propagation**: This project segments customers into distinct personas by identifying representative "exemplar" individuals within the data, allowing for targeted marketing strategies based on observed spending habits and income levels.
+
 2. **Balanced Iterative Reducing and Clustering using Hierarchies**: This project implements and evaluates the BIRCH algorithm on the Wine dataset to perform unsupervised clustering, utilizing PCA for visualization and metric-based analysis to compare clustering performance against true target classes.
+
 3. **Density-Based Spatial Clustering of Applications with Noise**: This project identifies clusters based on regional density, allowing for the detection of non-spherical shapes and anomalous noise points.
+
 4. **K-Means**: This project employs centroid-based partitioning to segment data into predefined, spherical clusters based on feature similarity.
+
 5. **Hierarchical Agglomerative Clustering**: This project builds a bottom-up hierarchy visualized via a dendrogram, allowing for intuitive identification of customer segments by analyzing the Euclidean distance between merging groups.
+    
 6. **Mean Shift**: This project applies the Mean Shift clustering algorithm to the Mall Customers dataset to automatically discover customer segments based on annual income and spending behavior for targeted marketing analysis.
+    
 7. **Factor Analysis**: This project used Factor Analysis to the Big Five Personality Dataset to uncover latent personality traits and validate the five-factor psychological model through dimensionality reduction and factor extraction.
