@@ -1,4 +1,4 @@
-Implementing core machine learning algorithms for revision purposes
+Implementing core machine learning algorithms for revision purposes.
 
 **Supervised Learning**:
 
