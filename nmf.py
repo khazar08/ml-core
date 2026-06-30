@@ -35,10 +35,6 @@ def main():
         X_reconstructed.flatten()
     )
 
-    print("=" * 60)
-    print("NMF RESULTS")
-    print("=" * 60)
-
     print(f"Dataset samples   : {X.shape[0]}")
     print(f"Dataset features  : {X.shape[1]}")
     print(f"NMF components    : {nmf.n_components}")
