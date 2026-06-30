@@ -5,7 +5,6 @@ from sklearn.metrics import root_mean_squared_error, r2_score
 
 df = pd.read_csv("garments_worker_productivity.csv")
 
-# wip (work in progress) is NaN mainly for the finishing department,
 df["wip"] = df["wip"].fillna(0)
 
 for col in ["department", "quarter", "day"]:
