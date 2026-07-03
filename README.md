@@ -40,3 +40,9 @@ Implementing core machine learning algorithms for revision purposes.
 8. **Uniform Manifold Approximation and Projection**: Applied UMAP dimensionality reduction to the Iris dataset to transform four-dimensional flower measurements into a two-dimensional embedding that reveals natural species clusters and relationships.
 9. **Non-Negative Matrix Factorization**: This project applies NMF to the  Breast Cancer Wisconsin dataset to extract 5 latent feature components and evaluate reconstruction accuracy.
 10. **t-Distributed Stochastic Neighbor Embedding**: This project applies t-SNE to the Wine Recognition dataset to project 13 chemical features into a 2D space, revealing natural clusters among three wine cultivars.
+
+**Semi-Supervised Learning**
+
+1. **Generative Adversarial Network (GAN)**: This project implements GAN on the MNIST dataset, training with only 1,000 labeled samples while leveraging unlabeled data to achieve competitive classification accuracy and generate realistic digit images.
+
+
