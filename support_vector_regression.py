@@ -307,7 +307,6 @@ plt.tight_layout()
 plt.show()
 
 
-# GENERAL RESULTS
 
 # RBF Kernel:
 #   R² Score: 0.4523 - explains 45% of variance, moderate performance
@@ -326,33 +325,3 @@ plt.show()
 #   MAE: 58.34 - much worse than other kernels
 #   RMSE: 69.87 - large prediction errors
 #   MAPE: 47.23% - unacceptable for practical use
-
-
-# DATASET 2: BUILDING ENERGY EFFICIENCY
-
-# Best parameters: {'C': 100, 'epsilon': 0.01, 'kernel': 'rbf'}
-# Best CV R² score: 0.9342 - excellent cross-validation performance
-
-# Energy Efficiency Results:
-#   Test R²: 0.9287 - explains 93% of variance, excellent
-#   Test MAE: 1.89 kWh/m² - very accurate predictions
-#   Test RMSE: 2.45 kWh/m² - reliable for engineering
-
-
-# DATASET 3: CONCRETE COMPRESSIVE STRENGTH
-
-#   Test R²: 0.8562 - good performance, explains 86% of variance
-#   Test MAE: 5.23 MPa - acceptable for engineering design
-#   Test RMSE: 7.18 MPa - reasonable error range
-#   CV R² (mean ± std): 0.8415 ± 0.0312 - stable, consistent performance
-
-
-# COMPARISON WITH OTHER REGRESSORS (Diabetes Dataset)
-
-#               Model  R² Score    MAE
-#      Random Forest   0.4789   39.87  # Best performer, handles mixed data
-#         Ridge (L2)   0.4612   41.23  # Strong regularization helps
-#         SVR (RBF)    0.4523   42.18  # Competitive with linear models
-#   Linear Regression  0.4491   41.96  # Simple but effective
-#         Lasso (L1)   0.4412   42.45  # Feature selection helps slightly
-#       Decision Tree  0.3987   45.67  # Worst, overfits despite depth limit
