@@ -12,7 +12,7 @@ Implementing core machine learning algorithms for revision purposes.
   
   5. **Bayesian Regression:** This project leverages Bayesian regression to model insurance costs, providing a way to identify key drivers while offering reliable predictions for future medical expenses.
   
-  6. **Lasso Regression:** This project uses Lasso Regression to predict diabetes from medical features, including data preprocessing, exploratory analysis, hyperparameter tuning, feature selection, model evaluation (accuracy, ROC-AUC, confusion matrix). For model comparison practices, I also created visualizations comparing Lasso to standard Logistic Regression.
+  6. **Lasso Regression:** This project uses Lasso Regression to predict diabetes from medical features, including data preprocessing, exploratory analysis, hyperparameter tuning, feature selection, model evaluation (accuracy, ROC-AUC, confusion matrix).
   
   7. **Quadratic Discriminant Analysis:** QDA for classification on Wine dataset using different covariance matrices per class to create quadratic decision boundaries.
   
