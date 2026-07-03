@@ -44,6 +44,7 @@ Implementing core machine learning algorithms for revision purposes.
 **Semi-Supervised Learning**
 
 1. **Generative Adversarial Network (GAN)**: This project implements GAN on the MNIST dataset, training with only 1,000 labeled samples while leveraging unlabeled data to achieve competitive classification accuracy and generate realistic digit images.
+  
 2. **Graph-based Semi-Supervised Learning**: This project implements graph-based semi-supervised learning on MNIST using a neural network with graph Laplacian regularization, achieving competitive classification accuracy with only 100 labeled samples by leveraging the manifold structure of unlabeled data.
 
 
