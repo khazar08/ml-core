@@ -41,7 +41,7 @@ Implementing core machine learning algorithms for revision purposes.
 9. **Non-Negative Matrix Factorization**: This project applies NMF to the  Breast Cancer Wisconsin dataset to extract 5 latent feature components and evaluate reconstruction accuracy.
 10. **t-Distributed Stochastic Neighbor Embedding**: This project applies t-SNE to the Wine Recognition dataset to project 13 chemical features into a 2D space, revealing natural clusters among three wine cultivars.
     
-11. **Gaussian Mixture Model **: This Python script implements Gaussian Mixture Model (GMM)-based semi-supervised learning on CIFAR-10 with a CNN feature extractor.
+11. **Gaussian Mixture Model**: This Python script implements Gaussian Mixture Model (GMM)-based semi-supervised learning on CIFAR-10 with a CNN feature extractor.
 
 
 **Semi-Supervised Learning**
