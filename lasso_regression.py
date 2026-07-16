@@ -23,16 +23,13 @@ for feature in features_with_zeros:
     zero_count = (df[feature] == 0).sum()
     if zero_count > 0:
         print(f"  {feature}: {zero_count} zero values ({zero_count/len(df)*100:.2f}%)")
-        # Replace zeros with median (excluding zeros)
         median_value = df[df[feature] != 0][feature].median()
         df[feature] = df[feature].replace(0, median_value)
         print(f"    → Replaced with median: {median_value:.2f}")
 
-# Separate features and target
 X = df.drop('Outcome', axis=1)
 y = df['Outcome']
 
-# Correlation matrix
 plt.figure(figsize=(12, 10))
 correlation_matrix = X.corr()
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', center=0, 
@@ -65,12 +62,10 @@ plt.tight_layout()
 plt.savefig('feature_distributions.png', dpi=150)
 plt.show()
 
-# Split data
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42, stratify=y
 )
 
-# Create pipeline with scaling and Lasso
 scaler = StandardScaler()
 lasso = Lasso(random_state=42, max_iter=10000)
 
@@ -79,13 +74,10 @@ pipeline = Pipeline([
     ('lasso', lasso)
 ])
 
-# Define hyperparameter grid
 param_grid = {
     'lasso__alpha': np.logspace(-4, 1, 50)  # alpha from 0.0001 to 10
 }
 
-# Grid search with cross-validation
-print("\n🔍 Performing Grid Search with 5-fold CV...")
 grid_search = GridSearchCV(
     pipeline, param_grid, cv=5, scoring='roc_auc', 
     n_jobs=-1, verbose=1
@@ -94,7 +86,6 @@ grid_search.fit(X_train, y_train)
 
 best_model = grid_search.best_estimator_
 
-# Get feature coefficients from best model
 scaler_fitted = best_model.named_steps['scaler']
 lasso_fitted = best_model.named_steps['lasso']
 
@@ -107,7 +98,6 @@ coef_df = pd.DataFrame({
     'Abs_Coefficient': np.abs(coefficients)
 }).sort_values('Abs_Coefficient', ascending=False)
 
-# Identify features selected (non-zero coefficients)
 selected_features = coef_df[coef_df['Coefficient'] != 0]['Feature'].tolist()
 zero_features = coef_df[coef_df['Coefficient'] == 0]['Feature'].tolist()
 
@@ -121,7 +111,6 @@ if zero_features:
     for f in zero_features:
         print(f"  • {f}")
 
-# Visualize coefficients
 plt.figure(figsize=(10, 6))
 colors = ['red' if c < 0 else 'green' for c in coef_df['Coefficient']]
 plt.barh(coef_df['Feature'], coef_df['Coefficient'], color=colors, alpha=0.7)
@@ -158,7 +147,6 @@ print(f"  ROC-AUC:   {roc_auc:.4f}")
 
 print(classification_report(y_test, y_pred_binary, target_names=['Non-Diabetic', 'Diabetic']))
 
-# Confusion Matrix
 cm = confusion_matrix(y_test, y_pred_binary)
 plt.figure(figsize=(8, 6))
 sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', 
@@ -171,7 +159,6 @@ plt.tight_layout()
 plt.savefig('confusion_matrix.png', dpi=150)
 plt.show()
 
-# ROC Curve
 fpr, tpr, thresholds = roc_curve(y_test, y_pred_proba_values)
 plt.figure(figsize=(8, 6))
 plt.plot(fpr, tpr, 'b-', linewidth=2, label=f'Lasso (AUC = {roc_auc:.4f})')
@@ -186,11 +173,9 @@ plt.savefig('roc_curve.png', dpi=150)
 plt.show()
 
 
-# Create a range of alpha values
 alphas = np.logspace(-4, 1, 100)
 coef_path = []
 
-# Train Lasso models with different alphas
 for alpha in alphas:
     lasso_temp = Lasso(alpha=alpha, random_state=42, max_iter=10000)
     X_train_scaled = scaler.fit_transform(X_train)
@@ -199,7 +184,6 @@ for alpha in alphas:
 
 coef_path = np.array(coef_path)
 
-# Plot coefficient path
 plt.figure(figsize=(12, 7))
 for i, feature in enumerate(feature_names):
     plt.plot(alphas, coef_path[:, i], label=feature, linewidth=2)
@@ -219,7 +203,6 @@ plt.show()
 
 from sklearn.linear_model import LogisticRegression
 
-# Logistic Regression for comparison
 log_reg = LogisticRegression(random_state=42, max_iter=1000)
 log_reg_pipeline = Pipeline([
     ('scaler', StandardScaler()),
@@ -248,7 +231,6 @@ print(f"  {'Features Used':<15} {len(selected_features):<15} {len(X.columns):<15
 
 
 
-# Save predictions
 results_df = pd.DataFrame({
     'Actual': y_test.values,
     'Predicted_Continuous': y_pred,
@@ -257,10 +239,8 @@ results_df = pd.DataFrame({
 })
 results_df.to_csv('lasso_predictions.csv', index=False)
 
-# Save feature coefficients
 coef_df.to_csv('lasso_coefficients.csv', index=False)
 
-# Save model summary
 with open('lasso_model_summary.txt', 'w') as f:)
     f.write(f"Best alpha: {best_model.named_steps['lasso'].alpha:.6f}\n")
     f.write(f"Best CV ROC-AUC: {grid_search.best_score_:.4f}\n\n")
