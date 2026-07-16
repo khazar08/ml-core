@@ -19,11 +19,9 @@ try:
     df = pd.read_csv('credit_card_data.csv')
 except:
     print("Dataset not found. Generating synthetic credit card data...")
-    # Generate synthetic credit card data
     np.random.seed(42)
     n_customers = 500
     
-    # Realistic credit card features
     balance = np.random.gamma(2, 1000, n_customers)
     balance = np.clip(balance, 0, 20000)
     
@@ -99,7 +97,6 @@ except:
     })
 
 
-# Create additional features
 df['Utilization_Rate'] = df['Balance'] / (df['Credit_Limit'] + 1)
 df['Payment_Ratio'] = df['Payments'] / (df['Purchases'] + 1)
 df['Cash_Advance_Ratio'] = df['Cash_Advance'] / (df['Purchases'] + 1)
@@ -108,7 +105,6 @@ df['Days_To_Pay'] = np.random.randint(15, 60, len(df))
 df.replace([np.inf, -np.inf], 0, inplace=True)
 df.fillna(0, inplace=True)
 
-# Correlation matrix
 plt.figure(figsize=(12, 10))
 corr_matrix = df[['Balance', 'Purchases', 'Cash_Advance', 'Credit_Limit', 
                   'Payments', 'Utilization_Rate', 'Payment_Ratio']].corr()
@@ -141,7 +137,6 @@ feature_cols = ['Balance', 'Purchases', 'Cash_Advance',
                 'Credit_Limit', 'Payments', 'Utilization_Rate']
 X = df[feature_cols].values
 
-# Use RobustScaler for outlier handling
 scaler = RobustScaler()
 X_scaled = scaler.fit_transform(X)
 
@@ -149,7 +144,6 @@ print("\nFeatures scaled using RobustScaler (handles outliers)")
 print(f"Original range - Balance: [{X[:,0].min():.0f}, {X[:,0].max():.0f}]")
 print(f"Scaled range - Balance: [{X_scaled[:,0].min():.2f}, {X_scaled[:,0].max():.2f}]")
 
-# PCA for visualization
 pca = PCA(n_components=2)
 X_pca = pca.fit_transform(X_scaled)
 print(f"\nPCA explained variance: {pca.explained_variance_ratio_.sum():.2%}")
@@ -363,7 +357,6 @@ else:
     print("Not enough clusters for evaluation")
 
 
-# DBScan vs K-Means
 from sklearn.cluster import KMeans
 
 kmeans = KMeans(n_clusters=max(2, n_clusters), random_state=42, n_init=10)
@@ -481,31 +474,3 @@ CLUSTER STATISTICS:
   NOISE POINTS: 32 customers
 
 
-CLUSTER SUMMARY:
-   Cluster  Size  Avg_Balance  Avg_Purchases  Avg_Credit_Limit  Avg_Utilization        Description
-   Cluster 0    82  10872.45       6854.32           18923.67           57.45%    High Risk - Overutilized
-   Cluster 1    95   3245.78       1876.43           24321.89           13.35%    Premium - Low Utilization
-   Cluster 2    78   2156.89        289.54            8967.34           24.05%    Inactive - Low Usage
-   Cluster 3    65  18923.67       9876.54           18923.67          100.00%    Delinquent - Maxed Out
-   Cluster 4   148   3456.89       1567.32            8765.43           39.44%    Average Customer
-      Noise    32        NaN            NaN                NaN              NaN    Outliers/Anomalies
-
-
-Silhouette Score: 0.6234
-   (Range: -1 to 1, higher is better)
-Davies-Bouldin Index: 0.8945
-   (Lower is better)
-Calinski-Harabasz Index: 1245.67
-   (Higher is better)
-
-DBSCAN vs K-MEANS COMPARISON
-
-
-MODEL COMPARISON:
-  Metric                    DBSCAN          K-Means        
-  -------------------------------------------------------
-  Silhouette Score          0.6234          0.5432         
-  Number of Clusters        5               5              
-  Noise Points Detected     32              0              
-  Detects Arbitrary Shapes  Yes             No             
-  Needs Parameter Selection Eps + Min Samples K Value       
