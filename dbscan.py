@@ -8,7 +8,6 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn.metrics import silhouette_score, davies_bouldin_score, calinski_harabasz_score
 from sklearn.decomposition import PCA
 import warnings
-warnings.filterwarnings('ignore')
 
 plt.style.use('seaborn-v0_8-darkgrid')
 sns.set_palette("husl")
