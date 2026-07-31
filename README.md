@@ -54,6 +54,7 @@
 **Reinforcement Learning**
 
 1. **Deep Q-Network (DQN)**: DQN agent that learns to balance a pole on a cart through reinforcement learning, with comprehensive training visualization and performance analysis.
+
 2. **REINFORCE (a.k.a. Monte Carlo Policy Gradient)**: A policy gradient REINFORCE agent that learns to balance a pole on a cart through direct policy optimization, with comprehensive training visualization and analysis.
 
 
