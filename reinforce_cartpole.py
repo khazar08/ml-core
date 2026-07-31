@@ -272,8 +272,7 @@ class REINFORCEVisualizer:
                 probs = agent.policy_net(state_tensor).cpu().numpy()[0]
             action_probs.append(probs)
         
-        action_probs = np.array(action_probs)
-        
+        action_probs = np.array(action_probs)   
         state_dims = ['Cart Position', 'Cart Velocity', 'Pole Angle', 'Pole Angular Velocity']
         
         for i, ax in enumerate(axes.flat):
