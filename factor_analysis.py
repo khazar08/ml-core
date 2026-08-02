@@ -2,9 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-
 from sklearn.preprocessing import StandardScaler
-
 from factor_analyzer import FactorAnalyzer
 from factor_analyzer.factor_analyzer import (
     calculate_bartlett_sphericity,
@@ -35,7 +33,6 @@ scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
 # bartlett test
-
 chi_square_value, p_value = calculate_bartlett_sphericity(X)
 
 print("\nBartlett Test")
@@ -150,13 +147,6 @@ scores = pd.DataFrame(
 
 print("\nFactor Scores")
 print(scores.head())
-
-print("\nINTERPRETATION GUIDE")
-print("- Factor with EXT questions -> Extraversion")
-print("- Factor with EST questions -> Neuroticism")
-print("- Factor with AGR questions -> Agreeableness")
-print("- Factor with CSN questions -> Conscientiousness")
-print("- Factor with OPN questions -> Openness")
 
 # KMO = 0.913
 # Bartlett p-value < 0.001
