@@ -12,7 +12,6 @@ data["diagnosis"] = data["diagnosis"].map({"M": 1, "B": 0})
 y = data["diagnosis"]
 x = data.drop("diagnosis", axis=1)
 
-# Split first so the test set stays unseen
 # stratify=y keeps the malignant/benign ratio consistent across both sets
 x_train, x_test, y_train, y_test = train_test_split(
     x, y, test_size=0.3, random_state=42, stratify=y
