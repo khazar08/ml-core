@@ -57,6 +57,8 @@
 
 2. **REINFORCE (a.k.a. Monte Carlo Policy Gradient)**: A policy gradient REINFORCE agent that learns to balance a pole on a cart through direct policy optimization, with comprehensive training visualization and analysis.
 
+3. **Deep Deterministic Policy Gradient (DDPG)**: A DDPG actor-critic agent that learns to balance a pole on a cart with continuous action space, featuring experience replay and target networks.
+
 
 
 
