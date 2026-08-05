@@ -59,6 +59,10 @@
 
 3. **Deep Deterministic Policy Gradient (DDPG)**: A DDPG actor-critic agent that learns to balance a pole on a cart with continuous action space, featuring experience replay and target networks.
 
+4. **Twin Delayed Deep Deterministic Policy Gradient (TD3)**: A TD3 agent with dual critics and delayed policy updates for stable learning on CartPole.
+
+
+
 
 
 
