@@ -313,11 +313,8 @@ final_test_acc = model.evaluate(test_loader)
 print(f'Final Test Accuracy: {final_test_acc:.2f}%')
 
 model.analyze_gmm_components()
-
 model.visualize_embeddings(test_loader, method='tsne')
-
 model.visualize_gmm_components(test_loader)
-
 model.plot_learning_curves()
 
 print(f"\nGMM-based Semi-Supervised Learning completed with {num_labeled} labeled samples on CIFAR-10")
