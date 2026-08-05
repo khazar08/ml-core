@@ -61,6 +61,9 @@
 
 4. **Twin Delayed Deep Deterministic Policy Gradient (TD3)**: A TD3 agent with dual critics and delayed policy updates for stable learning on CartPole.
 
+5. **Soft Actor-Critic (SAC)**: A SAC agent with automatic temperature tuning that learns to balance CartPole through maximum entropy reinforcement learning.
+
+
 
 
 
