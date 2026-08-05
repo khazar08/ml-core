@@ -63,6 +63,9 @@
 
 5. **Soft Actor-Critic (SAC)**: A SAC agent with automatic temperature tuning that learns to balance CartPole through maximum entropy reinforcement learning.
 
+6. **Advantage Actor-Critic (A2C)**: An A2C agent that combines policy and value learning with shared network architecture for stable CartPole training.
+
+
 
 
 
