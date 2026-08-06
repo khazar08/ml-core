@@ -67,6 +67,9 @@
 
 7. **Proximal Policy Optimization (PPO)**: A PPO agent with clipped surrogate objective and multiple epochs of updates for stable and sample-efficient CartPole training.
 
+8. **Q-Learning**: A Q-Learning agent that learns to navigate a warehouse grid efficiently while managing limited energy and avoiding hazards.
+
+
 
 
 
