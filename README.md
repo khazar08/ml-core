@@ -67,6 +67,8 @@
 
 7. **Q-Learning**: A Q-Learning agent that learns to navigate a warehouse grid efficiently while managing limited energy and avoiding hazards.
 
+8. **Dyna-Q+ (model-based RL)**: A model-based Dyna-Q+ agent with prioritized sweeping that learns a maze by planning on imagined experience, and uses a curiosity bonus to discover a shortcut that silently opens mid-training.
+
 
 
 
