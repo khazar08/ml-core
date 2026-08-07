@@ -57,17 +57,17 @@
 
 2. **REINFORCE (a.k.a. Monte Carlo Policy Gradient)**: A policy gradient REINFORCE agent that learns to balance a pole on a cart through direct policy optimization, with comprehensive training visualization and analysis.
 
-3. **Deep Deterministic Policy Gradient (DDPG)**: A DDPG actor-critic agent that learns to balance a pole on a cart with continuous action space, featuring experience replay and target networks.
+3. 8. **Dyna-Q+ (model-based RL)**: A model-based Dyna-Q+ agent with prioritized sweeping that learns a maze by planning on imagined experience, and uses a curiosity bonus to discover a shortcut that silently opens mid-training.
 
-4. **Twin Delayed Deep Deterministic Policy Gradient (TD3)**: A TD3 agent with dual critics and delayed policy updates for stable learning on CartPole.
+4. **Deep Deterministic Policy Gradient (DDPG)**: A DDPG actor-critic agent that learns to balance a pole on a cart with continuous action space, featuring experience replay and target networks.
 
-5. **Soft Actor-Critic (SAC)**: A SAC agent with automatic temperature tuning that learns to balance CartPole through maximum entropy reinforcement learning.
+5. **Twin Delayed Deep Deterministic Policy Gradient (TD3)**: A TD3 agent with dual critics and delayed policy updates for stable learning on CartPole.
 
-6. **Proximal Policy Optimization (PPO)**: A PPO agent with clipped surrogate objective and multiple epochs of updates for stable and sample-efficient CartPole training.
+6. **Soft Actor-Critic (SAC)**: A SAC agent with automatic temperature tuning that learns to balance CartPole through maximum entropy reinforcement learning.
 
-7. **Q-Learning**: A Q-Learning agent that learns to navigate a warehouse grid efficiently while managing limited energy and avoiding hazards.
+7. **Proximal Policy Optimization (PPO)**: A PPO agent with clipped surrogate objective and multiple epochs of updates for stable and sample-efficient CartPole training.
 
-8. **Dyna-Q+ (model-based RL)**: A model-based Dyna-Q+ agent with prioritized sweeping that learns a maze by planning on imagined experience, and uses a curiosity bonus to discover a shortcut that silently opens mid-training.
+8. **Q-Learning**: A Q-Learning agent that learns to navigate a warehouse grid efficiently while managing limited energy and avoiding hazards.
 
 
 
