@@ -63,11 +63,9 @@
 
 5. **Soft Actor-Critic (SAC)**: A SAC agent with automatic temperature tuning that learns to balance CartPole through maximum entropy reinforcement learning.
 
-6. **Advantage Actor-Critic (A2C)**: An A2C agent that combines policy and value learning with shared network architecture for stable CartPole training.
+6. **Proximal Policy Optimization (PPO)**: A PPO agent with clipped surrogate objective and multiple epochs of updates for stable and sample-efficient CartPole training.
 
-7. **Proximal Policy Optimization (PPO)**: A PPO agent with clipped surrogate objective and multiple epochs of updates for stable and sample-efficient CartPole training.
-
-8. **Q-Learning**: A Q-Learning agent that learns to navigate a warehouse grid efficiently while managing limited energy and avoiding hazards.
+7. **Q-Learning**: A Q-Learning agent that learns to navigate a warehouse grid efficiently while managing limited energy and avoiding hazards.
 
 
 
