@@ -57,7 +57,7 @@
 
 2. **REINFORCE (a.k.a. Monte Carlo Policy Gradient)**: A policy gradient REINFORCE agent that learns to balance a pole on a cart through direct policy optimization, with comprehensive training visualization and analysis.
 
-3. 8. **Dyna-Q+ (model-based RL)**: A model-based Dyna-Q+ agent with prioritized sweeping that learns a maze by planning on imagined experience, and uses a curiosity bonus to discover a shortcut that silently opens mid-training.
+3. **Dyna-Q+ (model-based RL)**: A model-based Dyna-Q+ agent with prioritized sweeping that learns a maze by planning on imagined experience, and uses a curiosity bonus to discover a shortcut that silently opens mid-training.
 
 4. **Deep Deterministic Policy Gradient (DDPG)**: A DDPG actor-critic agent that learns to balance a pole on a cart with continuous action space, featuring experience replay and target networks.
 
