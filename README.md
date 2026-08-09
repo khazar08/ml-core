@@ -1,7 +1,7 @@
 # Machine Learning Algorithms
 
 
-Implementing core machine learning algorithms for personal revision purposes (supervised, unsupervised, semi-supervised, and reinforcement learning)
+Implementing core machine learning algorithms for personal revision purposes (supervised, unsupervised, semi-supervised, and reinforcement learning). One algorithm per day.
 
 **Supervised Learning**:
 
