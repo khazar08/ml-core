@@ -72,6 +72,8 @@ Implementing core machine learning algorithms for personal revision purposes (su
 
 8. **Q-Learning**: A Q-Learning agent that learns to navigate a warehouse grid efficiently while managing limited energy and avoiding hazards.
 
+9. **Advantage-Weighted Actor-Critic for BipedalWalker-v3**: A reinforcement learning agent trained to learn stable walking and movement in the challenging BipedalWalker environment.
+
 
 
 
