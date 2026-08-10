@@ -74,6 +74,10 @@ Implementing core machine learning algorithms for personal revision purposes (su
 
 9. **Advantage-Weighted Actor-Critic for BipedalWalker-v3**: A reinforcement learning agent trained to learn stable walking and movement in the challenging BipedalWalker environment.
 
+10. An Actor-Critic using Kronecker-factored Trust Region: An ACKTR agent that scales natural gradient optimization for efficient LunarLander training.
+
+
+
 
 
 
