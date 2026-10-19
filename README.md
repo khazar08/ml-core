@@ -76,6 +76,10 @@ Implementing core machine learning algorithms for personal revision purposes (su
 
 10. **Actor-Critic using Kronecker-factored Trust Region**: An ACKTR agent that scales natural gradient optimization for efficient LunarLander training.
 
+11. **Multi-Armed Bandits**: Compares epsilon-greedy, UCB1, and Thompson Sampling on Gaussian and Bernoulli bandits via cumulative regret, demonstrating the exploration–exploitation tradeoff fundamental to RL.
+
+
+
 
 
 
